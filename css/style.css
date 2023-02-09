@@ -1,0 +1,421 @@
+@import url(fonts.css);
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+   list-style: none; 
+}
+
+a{
+    text-decoration: none;
+}
+
+:root{
+    --font_R: 'Roboto';
+    --font_Rw: 'Raleway';
+    --text: #fff;
+    --title: #69CF17;
+    --hover: #69CF17BF;
+}
+
+.container{
+   max-width: 1110px;
+   width: 100%;
+   margin: 0 auto;
+}
+body{
+    background: #0C0C0C;
+    
+}
+
+/* =====================Ads start ======================== */
+
+.ads__container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 21px;
+    height: 60px;
+   
+}
+
+.logo__link{
+    display: flex;
+    width: 100%;
+    max-width: 20px;
+    height: 23px;
+    
+}
+
+.ads__text{
+    color: var(--text);
+    font-family: var(--font_R);
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 5px;
+
+}
+
+.ads__lists{
+    display: flex;
+    gap: 20px;}
+
+
+.link{
+   color: var(--text);
+   font-size: 16px;
+   font-family: var(--font_R);
+   font-weight: 400;
+}
+
+/* =================== NAvigation start ======================= */
+
+/* nav{
+   
+    position: sticky;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+} */
+
+.nav{
+    border: 1px solid rgba(125, 115, 115, 0.5);
+    
+}
+
+.nav__container{
+ 
+    height: 65px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     
+}
+
+.nav__logo{
+    
+    max-width: 216px  ;
+    width: 100%;
+    height: 53px;
+    background: rgba(10, 148, 24, 0.75);
+    border: 4px solid #06600F;
+    border-radius: 4px;
+}
+
+.logo__text{
+    color: var(--text);
+    font-family: var(--font_R);
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.nav__lists{
+    display: flex;
+
+}
+
+
+.nav__link{
+    padding: 22px 14px;
+    color: var(--text);
+    font-family: var(--font_Rw) ;
+    font-weight: 400;
+    font-size: 18px ;
+}
+
+.nav__link:hover{
+    background: var(--hover);
+}
+ /* =============================== Header content start ========================= */
+
+.header{
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    min-height: 700px;
+    height: 100%; 
+    margin-bottom:  48px; 
+}
+
+.header__banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__content{
+    position: relative;
+  
+}
+
+.header__title{
+    color: var(--title);
+    font-size: 72px ;
+    font-family: var(--font_Rw);
+    font-weight: 900;
+    margin-top: 167px;
+}
+
+.header__h3{
+    color: var(--title);
+    font-family: var(--font_R);
+    font-weight: 400;
+    font-size: 36px ;
+    margin: 18px 0;
+}
+
+.header__text{
+    color: var(--text);
+    font-size: 18px;
+    line-height: 24px;
+    font-family: var(--font_Rw);
+    font-weight: 400;
+    margin-bottom: 30px;
+
+}
+
+.header__btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pain{
+    background: rgba(105, 207, 23, 0.5);
+    padding: 33px 76px;
+    font-size: 50px;
+    color: var(--text);
+    font-family: var(--font_Rw);
+    font-weight: 100;
+
+}
+
+.header__btn{
+    width: 255px;
+    height: 51px;
+    background: linear-gradient(90deg, #69CF17 0%, #59ac16 100%);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 18px;
+    font-family: var(--font_Rw);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.header__btn:hover{
+    background: linear-gradient(90deg, #427717 0%, #59ac16 100%);
+}
+
+
+/* ======================== MAin start ============================ */
+
+.main__nav{
+    /* width: 100%; */
+    height: 65px;
+    background: #292929;
+    box-shadow: 0px 1px 8px rgba(17, 17, 17, 0.3);
+    color: var(--text);
+
+}
+
+.main__list{
+    display: flex;
+    
+}
+
+.main__link {
+    font-size: 18px;
+    color: var(--text);
+    padding: 20px 21px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: .5s;
+    margin-left: 21px;
+}
+
+.main__link:hover {
+    color: var(--text);
+}
+
+.main__link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--text);
+    bottom: 0;
+    transition: .5s;
+}
+
+.main__link:hover::after {
+    width: 100%;
+}
+
+
+/* =========================Main content start ========================= */
+
+.main__content-cards{
+    
+    background: #393636;
+    width: 100%;
+    max-height: 1171px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 30px;
+    padding: 15px ;
+}
+
+.card{
+    width: 370px;
+    height: 524px;
+    background: black;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    
+
+}
+
+.card__img{
+    max-width: 338px;
+    width: 100%;
+    height: 325px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+ 
+.card::before{
+    content: url(/images/Vector.png) ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 338px;
+    height:325px;
+    top: 15px;
+    left: 15px;
+    background: #69CF17E5  ;
+    transition: 0.3s;
+    border-radius: 4px;
+    transform: translateX(120%);
+    
+    
+}
+
+.card:hover::before{
+    transform: translateX(0);
+}
+
+
+.card__title{
+    color: var(--text);
+    font-size: 19px;
+    font-family: var(--font_Rw);
+    font-weight: 700;
+    width: 338px;
+
+}
+
+.card__text{
+    color: var(--text);
+    font-family: var(--font_Rw);
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 25px;
+    width: 339px;
+   
+    
+}
+
+ /* ====================== MAp start ========================= */
+
+.map__title{
+    color: var(--title);
+    text-align: center;
+    font-family: var(--font_Rw);
+    font-weight: 700;
+    font-size: 50px;
+    background: var(--text);
+    margin-top: 50px;
+    padding: 20px 0;
+ }
+
+
+ /* ======================== Footer start ======================= */
+
+.footer {
+    width: 100%;
+   
+    background: linear-gradient(180deg, #000000 0%, rgba(105, 207, 23, 0.5) 100%);
+
+ }
+
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 42px auto 92px ;
+}
+ 
+.footer__number{
+    color: var(--text);
+    font-family: var(--font_R);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.footer__nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.footer__list{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.footer__link{
+    color: var(--text);
+    font-family: var(--font_R);
+    font-weight: 400;
+    font-size: 20px;
+
+}
+
+
+
+.footer__ds{
+    width: 100%;
+    height: 57px;
+    background: #1A3406;
+    color: var(--text);
+    font-family: var(--font_R);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 81px;
+    padding: 19px;
+    
+}
